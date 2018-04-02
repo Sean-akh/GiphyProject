@@ -2,9 +2,7 @@ $(document).ready(function(){
 
     //Define the Varibles
     var faMovieArray=[], faMovie, faAddMovie, rate, rating;
-
 /**************************** STARTS of Functions ************************/
-
     //create the buttons
     function makeButtons(){
         //Clear the area to avoid multiple button of the same name when a new button is added
@@ -14,12 +12,12 @@ $(document).ready(function(){
         for (var i = 0; i < faMovieArray.length; i++) {
             //Generate the buttons
             butt = $("<button>");
-
+            //Add attribute
             butt.attr("type", "button");
             //Add Class
             butt.addClass("mvButton");
             //Add attribute
-            butt.attr("data-name", faMovieArray[i]);
+//butt.attr("data-name", faMovieArray[i]);
             //Add text to the button
             butt.text(faMovieArray[i]);
 
@@ -71,43 +69,27 @@ console.log('response is: ' + response);
 
 console.log(results);            
 
-        //place the response in #funny-animation-box
-        for(var j = 0; j < results.length; j++) {
-            //create the div
-            var faDiv = $("<div class='item>'");
-            //var rate = results[j].rating;
+            //place the response in #funny-animation-box
+            for(var j = 0; j < results.length; j++) {
+                //create the div
+                var faDiv = $("<div class='item>'");
+                //var rate = results[j].rating;
 
-            var rate = $("<p>").text("rating: " + results[j].rating);
-            var faImage = $("img");
-            faImage.attr("src", results[j].images.original_still.url);
+                var rate = $("<p>").text("rating: " + results[j].rating);
+                var faImage = $("img");
+                faImage.attr("src", results[j].images.original_still.url);
 
-            faDiv.prepend(rate);
-            faDiv.prepend(faImage);
+                faDiv.prepend(rate);
+                faDiv.prepend(faImage);
 
-            $("#funny-animation-box").prepend(faDiv);
+                $("#funny-animation-box").prepend(faDiv);
 
-        }
+            }
+        });
     });
 
     //Create the animation and still transition
-
-
-
-
-/////////////// End Of Documnent ///////////////////////
-});
     
-
-
-
-
-
-
-
-// Calling the renderButtons function to display the intial buttons
-//makeButtons();
-
-
 
 
 
