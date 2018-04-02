@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>API Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google font import for Open Sans and Exo2-->
+        <link href="https://fonts.googleapis.com/css?family=Exo:300,400,500,700|Open+Sans+Condensed:300|Open+Sans:200,300,400|PT+Sans|Raleway" rel="stylesheet">
+
+        <!-- connect to jquery
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+
+       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+
+        <!-- connect to Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- My Style sheet -->
+        <link rel="stylesheet" href="assets/css/style.css">
+      
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div id="jumboInside"><h1>Funny Animations and Videos</h1></div>
+            <div id="timeBox"></div>
+        </div>
+        <!-- Row For the SHow START -->
+        <div class="row">
+<!-- *********************************************************************************** -->
+            <!-- funny animation section START -->
+            <div class="col-md-6" id="FunnyAnimations">
+                <!-- Generated Buttons will show here -->
+                <div id="button-box">funny animation buttons go here<br><br><br></div>
+
+                <form id="movie-form">
+                    <label for="funny-animation-input">Funny Animation</label><br>
+                    <input type="text" id="funny-animation-input"><br>
+                    <br>
+            
+                    <!-- Button triggers new movie to be added -->
+                    <input id="add-funny-anim" type="submit" value="Add a Funny Animation">
+                </form>
+                <div id="funny-animation-box"></div>
+
+            </div>
+            <!-- funny animation section END -->
+
+<!-- *********************************************************************************** -->
+            <!-- Movie Section START -->
+            <div class="col-md-6" id="FunnyMovies">
+
+            </div>
+            <!-- Movie Section ENDS -->
+        </div>
+        <!-- Row For the SHow ENDS -->
+    </div>
+    <!-- Container ENDS -->
+       
+
+
+
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>

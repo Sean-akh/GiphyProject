@@ -1,0 +1,131 @@
+/**** Reset ****/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video header1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+
+body{
+    font-size: 18px;
+    font-family: open sans;
+    color: #2c3235;
+    font-weight: 400;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: #c8c8c8;
+    vertical-align: middle;
+    border-bottom: 10px solid #0077f0;
+    box-shadow: 5px 5px 20px #555555;
+}
+
+#jumboInside{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    padding-top: 2%;
+}
+
+h1{
+    font-family: Exo;
+    font-size: 45px;
+    font-weight: 400;
+    color: #b11116;
+    padding: 10px;
+}
+h2{
+    font-family: Exo;
+    font-size: 35px;
+    font-weight: 400;
+    color: #0077f0;
+     margin: 0px;
+    padding: 10px;
+}
+h4{
+  font-family: Exo;
+  font-size: 22px;
+  font-weight: 400;
+  color: #2c3235;;
+   margin: 0px;
+  padding: 5px;
+}
+
+
+/* the button class */
+.mvButton {
+    margin: 10px;
+    font-family: 'open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: .03em;
+    background-color: #0077f0;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px 15px 8px 15px;
+    cursor: pointer;
+    margin-bottom: 5px 10px 5px 10px;
+    box-shadow: 1px 1px 10px #444444;
+    margin-top: 2em;
+    margin-left: 20px;
+}
+
+.mvButton:hover{
+    background-color: #0057b0;
+    box-shadow: 0px 0px 10px #555555;
+}
+
+#add-funny-anim {
+    font-family: 'open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: .03em;
+    background-color: #0077f0;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px 15px 8px 15px;
+    cursor: pointer;
+    margin-bottom: 5px 10px 5px 10px;
+    box-shadow: 3px 3px 10px #555555;
+    margin-top: 1em;
+    margin-left: 20px;
+}
+
+#add-funny-anim:hover{
+    background-color: #0057b0;
+    box-shadow: 0px 0px 10px #555555;
+}
+
+/* Box that buttons will reside*/
+#button-box {
+    border-bottom: 9px solid #0077f0;
+    border-top: 3px solid #0077f0;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background: #D5D5D5;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    box-shadow: 2px 2px 10px #555555;
+    border-radius: 5px;
+
+}
