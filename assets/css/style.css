@@ -127,5 +127,8 @@ h4{
     padding: 5%;
     box-shadow: 2px 2px 10px #555555;
     border-radius: 5px;
+}
 
+.item{
+    border: 3px solid #0077f0;
 }

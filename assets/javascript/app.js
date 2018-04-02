@@ -1,117 +1,112 @@
 $(document).ready(function(){
 
     //Define the Varibles
-    // funny-animation
-    var faMovieArray=[], faMovie, faAddMovie;
-
-    // about movie
-    var amMovieArray=[], amMovie, maAddMovie, butt;
+    var faMovieArray=[], faMovie, faAddMovie, rate, rating;
 
 /**************************** STARTS of Functions ************************/
 
-//display the funny animation
-function displayMovieInfo (){
-    var movie = $(this).attr("data-name");
-    var key = "api_key=dDKdue88ZmaMAeboaltAX6uGX8tgryjS";
-    var queryURL = "https://api.giphy.com/v1/gifs/search?" + key + "&q=" + movie.split(' ').join('-') + "&limit=10&lang=en"; 
+    //create the buttons
+    function makeButtons(){
+        //Clear the area to avoid multiple button of the same name when a new button is added
+        $('#button-box').empty();
+
+        //loop through Funny animation array
+        for (var i = 0; i < faMovieArray.length; i++) {
+            //Generate the buttons
+            butt = $("<button>");
+
+            butt.attr("type", "button");
+            //Add Class
+            butt.addClass("mvButton");
+            //Add attribute
+            butt.attr("data-name", faMovieArray[i]);
+            //Add text to the button
+            butt.text(faMovieArray[i]);
+
+            // Append the button to the div #button-box
+            $("#button-box").append(butt);
+        }
+    }
+
+    // Read the player's input and execute makeButton function 
+    $("#add-funny-anim").on("click", function(event) {
+        event.preventDefault();
+
+        // This line grabs the input from the textbox
+        var movie = $("#funny-animation-input").val().trim();
+
+        // Adding movie from the textbox to our array
+        faMovieArray.push(movie);
+
+        // execute makeButton function to generate the button
+        makeButtons();
+
+        //clear input text for next input
+        $('#movie-form').each(function(){
+            this.reset();
+        });
+    });
+
+    //create query request, submit, process response and facilitate the display of information
+    $(document).on("click", ".mvButton", function(){
+        var movie =$(this).text();
+        var key = "api_key=dDKdue88ZmaMAeboaltAX6uGX8tgryjS";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?" + key + "&q=" + movie.split(' ').join('-') + "&limit=10&lang=en"; 
 
 console.log('Movie name is: ' + movie);
 console.log('The Query is: ' + queryURL);
 
-}
-/***********************************************************
+        $.ajax (
+            {
+            url: queryURL,
+            method: "GET"
+            }
+        )
+        .then(function(response){
+            //process the response
 
-//Send the query
-$.ajax ({
-    url: queryURL,
-    method: "GET"
-  })
-  .then(function(response){
-    //process the response
 console.log('response is: ' + response);
-    var results = response.data;
-    console.log('Rating Value is: ' + rate);        
-    //place the response in #funny-animation-box
-    for(var j = 0; j = results.length; j++) {
-        //create the div
-        var faDiv = $("<div class='item>'");
-        var rating = results[j].rating;
 
-        var rate = $("<p>").text("rating: "+ rating);
-        var faImage = $("img");
-        faImage.attr("src", result[j].images.original_still.url);
+        var results = response.data;
 
-        faDiv.prepend(rate);
-        faDiv.prepend(faImage);
+console.log(results);            
 
-        $("#funny-animation-box").prepend(faDiv);
+        //place the response in #funny-animation-box
+        for(var j = 0; j < results.length; j++) {
+            //create the div
+            var faDiv = $("<div class='item>'");
+            //var rate = results[j].rating;
 
-    }
+            var rate = $("<p>").text("rating: " + results[j].rating);
+            var faImage = $("img");
+            faImage.attr("src", results[j].images.original_still.url);
 
+            faDiv.prepend(rate);
+            faDiv.prepend(faImage);
+
+            $("#funny-animation-box").prepend(faDiv);
+
+        }
+    });
+
+    //Create the animation and still transition
+
+
+
+
+/////////////// End Of Documnent ///////////////////////
 });
-***************************************************************************/
-// End of display the movie information
-//create the buttons
-function makeButtons(){
-    //Clear the area to avoid multiple button of the same name when a new button is added
-    $('#button-box').empty();
-
-    //loop through Funny animation array
-    for (var i = 0; i < faMovieArray.length; i++) {
-        //Generate the buttons
-        butt = $("<button>");
-        //Add Class
-        butt.addClass("mvButton");
-        //Add attribute
-        butt.attr("data-name", faMovieArray[i]);
-        //Add text to the button
-        butt.text(faMovieArray[i]);
-
-var movie_name = faMovieArray[i].split(" ").join("_");
-console.log("movie_name: " + movie_name);
-
-butt.attr("name", movie_name);
-butt.attr("id", movie_name);
-
-        // Append the button to the div #button-box
-        $("#button-box").append(butt);
-    }
-}
-
-
-/**************************** END of Functions ************************/
-
-// This function handles events where a movie button is clicked
-$("#add-funny-anim").on("click", function(event) {
-  event.preventDefault();
-  // This line grabs the input from the textbox
-  var movie = $("#funny-animation-input").val().trim();
-  
-console.log('movie trim value is: ' + movie);
-
-  // Adding movie from the textbox to our array
-  faMovieArray.push(movie);
-console.log('famovieArray is: ' + faMovieArray);
-  // Calling makeButtons which handles the processing of our movie array
-  makeButtons();
-  //clear input text for next input
-  $('#movie-form').each(function(){
-    this.reset();
-  });
-});
+    
 
 
 
-// Adding a click event listener to all elements with a class of "mvButton"
-// $(document).on("click", ".mvButton", displayMovieInfo);
-$("#myButton").onClick(){
-    // do some coding....
-};
+
 
 
 
 // Calling the renderButtons function to display the intial buttons
-makeButtons();
+//makeButtons();
+
 
 
 
