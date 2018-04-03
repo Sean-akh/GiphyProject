@@ -85,12 +85,32 @@ console.log(results);
                     faImage.attr("image-state", "still")
                     faImage.addClass('pic-class');
                     faDiv.append(faImage);
-                    
+
                     //add rating of the movie
                     faDiv.append($("<p>").text("rating: " + results[j].rating));
                     $("#FunnyMovies").prepend(faDiv);
+                    //Change the background color based on the movies rate
+                    var rateColor = results[j].rating;
+
+                        if (rateColor == "r"){
+                            $(faDiv).css('background-color', '#ffbaba');
+
+                        }
+                        else if(rateColor == "pg-13"){
+                            $(faDiv).css('background-color', '#e4ffd7');
+
+                        }
+                        else if(rateColor == "pg"){
+                            $(faDiv).css('background-color', '#bafeff');
+
+                        }
+                        else if (rateColor == "g"){
+                            $(faDiv).css('background-color', '#f5d6f7');
+
+                        }
+                       
+                    }
                 }
-            }
         });
         //Create the animation and still transition
         $(document).on("click", ".pic-class", function(){
