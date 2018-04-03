@@ -132,12 +132,12 @@ h4{
 .item{
     border: 1px solid #0077f0;
     padding: 3em;
-    font-size: 13px;
+    font-size: 16px;
     text-transform: uppercase;
     color: #0077f0;
     margin: 1%;
     border-radius: 15px;
-    display: inline-flex;
+    display: inline-block;
 }
 
 .pic-class {
@@ -146,14 +146,16 @@ h4{
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    border: #2c3235 1px solid;
     border-radius: 15px;
     box-shadow: 2px 2px 5px #555555;
-}
-
-#FunnyMovies {
     display: inline-block;
-   /* max-width: 45%;
-    min-width: 25%;*/
-
 }
+p{
+    display: block;
+    padding: 5px 0 5px 0;
+}
+/*
+#FunnyMovies {
+
+
+}*/
