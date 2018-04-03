@@ -63,8 +63,6 @@ console.log('The Query is: ' + queryURL);
         .then(function(response){
             //process the response
 
-console.log('response is: ' + response);
-
         var results = response.data;
 
 console.log(results);            
@@ -72,23 +70,30 @@ console.log(results);
             //place the response in #funny-animation-box
             for(var j = 0; j < results.length; j++) {
                 //create the div
-                var faDiv = $("<div class='item>'");
-                //var rate = results[j].rating;
-
-                var rate = $("<p>").text("rating: " + results[j].rating);
-                var faImage = $("img");
+                var faDiv = $('<div>');
+                faDiv.addClass('item');
+                faDiv.attr('id', results[j].id);
+                //add the image
+                var faImage = $("<img>");
                 faImage.attr("src", results[j].images.original_still.url);
+                faImage.addClass('pic-class');
+                faDiv.append(faImage);
+                
+                //add rating of the movie
+                faDiv.append($("<p>").text("rating: " + results[j].rating));
+//faDiv.append($("<p>").text('<p id="description">' + results[j].slug));
 
-                faDiv.prepend(rate);
-                faDiv.prepend(faImage);
-
-                $("#funny-animation-box").prepend(faDiv);
-
+                $("#FunnyMovies").prepend(faDiv);
             }
+
         });
+        //Create the animation and still transition
+       // if (faImage.state === "still") {
+
+        //}
     });
 
-    //Create the animation and still transition
+    
     
 
 
