@@ -37,16 +37,28 @@
             
             <div class="col-md-6" id="FunnyAnimations">
                 <form id="movie-form">
-                  <P>  <label for="funny-animation-input">Please enter a topic<br>Movie name or animal</label></P>
+                  <P>  <label for="funny-animation-input">Please enter a topic<br>Like Movie Name or Animal</label></P>
                     <input type="text" id="funny-animation-input"><br>
                     <br>
                     <!-- Button triggers new movie to be added -->
                     <input id="add-funny-anim" type="submit" value="Show Something Funny">
                 </form>
-                <div id="funny-animation-box"></div>
             </div>
-            <div class="col-md-12" id="button-box"></div>
             <!-- funny animation section END -->
+            <!-- Form Connect to OMDb API -->
+            <div class="col-md-6" id="movies">
+                <form id="movie-form-mv">
+                    <P>  <label for="movie-input"><br>Find out About Your Favorite Movie</label></P>
+                      <input type="text" id="movie-input"><br>
+                      <br>
+                      <!-- Button triggers new movie to be added -->
+                      <input id="add-movie" type="submit" value="List My Movies">
+                </form>
+            </div>
+            <!-- Form Connect to OMDb API ENDS -->
+            <div class="col-md-6" id="button-box"></div>
+            <div class="col-md-6" id="button-box-m"></div>
+            
 
 <!-- *********************************************************************************** -->
             <!-- Movie Section START -->
@@ -54,15 +66,13 @@
 
             </div>
             <!-- Movie Section ENDS -->
+
         </div>
         <!-- Row For the SHow ENDS -->
     </div>
     <!-- Container ENDS -->
        
-
-
-
-
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/app-omdb.js"></script>
 </body>
 </html>

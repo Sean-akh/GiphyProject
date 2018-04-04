@@ -94,6 +94,33 @@ h4{
     box-shadow: 0px 0px 10px #555555;
 }
 
+/* the button class for OMDB API*/
+.mv-m-Button {
+    margin: 10px;
+    font-family: 'open Sans', sans-serif;
+    font-size: 16px;
+    letter-spacing: .03em;
+    background-color: #0077f0;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px 15px 8px 15px;
+    cursor: pointer;
+    margin-bottom: 5px 10px 5px 10px;
+    box-shadow: 1px 1px 10px #444444;
+    margin-top: 2em;
+    margin-left: 20px;
+}
+
+.mv-m-Button:hover{
+    background-color: #0057b0;
+    box-shadow: 0px 0px 10px #555555;
+}
+
+
+
+
+
 #add-funny-anim {
     font-family: 'open Sans', sans-serif;
     font-size: 18px;
@@ -110,7 +137,28 @@ h4{
     margin-left: 20px;
 }
 
-#add-funny-anim:hover{
+#add-funny-anim:hover {
+    background-color: #0057b0;
+    box-shadow: 0px 0px 10px #555555;
+}
+
+#add-movie {
+    font-family: 'open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: .03em;
+    background-color: #0077f0;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px 15px 8px 15px;
+    cursor: pointer;
+    margin-bottom: 5px 10px 5px 10px;
+    box-shadow: 3px 3px 10px #555555;
+    margin-top: 1em;
+    margin-left: 20px;
+}
+
+#add-movie:hover{
     background-color: #0057b0;
     box-shadow: 0px 0px 10px #555555;
 }
@@ -129,17 +177,30 @@ h4{
     border-radius: 5px;
 }
 
+#button-box-m {
+    border-bottom: 9px solid #a90000;
+    border-top: 3px solid #a90000;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background: #D5D5D5;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+    box-shadow: 2px 2px 10px #555555;
+    border-radius: 5px;
+}
+
 .item{
     border: 1px solid #0077f0;
     padding: 3em;
     font-size: 16px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     color: #0077f0;
     margin: 1%;
     border-radius: 15px;
     display: inline-block;
 }
-
+/* Giphy API*/
 .pic-class {
     width: 300px;
     height: 200px;
@@ -150,6 +211,41 @@ h4{
     box-shadow: 2px 2px 5px #555555;
     display: inline-block;
 }
+/* for OMDB API*/
+.pic-class-M {
+    float: left;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #555555;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.itemM{
+    border: 1px solid #2c3235;
+    padding: 3em;
+    font-size: 16px;
+    /*text-transform: uppercase;*/
+    color: #0077f0;
+    margin: 1%;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: left;
+}
+
+.rate-class {
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.plot-class {
+    /*display: inline;*/
+    color: #2c3235;
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
 p{
     display: block;
     padding: 5px 0 5px 0;
@@ -158,4 +254,8 @@ p{
 #FunnyMovies {
 
 
-}*/
+}
+#discoverMovies {
+
+}
+*/
